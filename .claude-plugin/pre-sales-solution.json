@@ -1,5 +1,5 @@
 {
-  "name": "dbs-pre-sales-solution",
+  "name": "bss-pre-sales-solution",
   "description": "售前方案 Skill。覆盖客户需求分析、方案撰写、POC 测试、竞标全流程。通过原子知识库中的案例和方法论，帮助售前人员诊断方案卡点、生成下一步行动建议。",
   "source": "./",
   "strict": false,
@@ -7,6 +7,6 @@
   "category": "business-pre-sales",
   "keywords": ["pre-sales", "solution", "proposal", "poc", "bidding", "chinese"],
   "skills": [
-    "./skills/pre-sales-solution"
+    "./skills/bss-pre-sales-solution"
   ]
 }

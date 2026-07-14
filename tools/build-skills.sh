@@ -19,25 +19,25 @@ trap 'rm -rf "$INNER_DIR"' EXIT
 # skill 名 → 分组目录
 group_for() {
   case "$1" in
-    dbs|dbs-update)
+    bss|bss-update)
       echo "必装入口" ;;
-    dbs-diagnosis|dbs-deconstruct|dbs-goal|dbs-good-question|dbs-slowisfast|dbs-action)
+    bss-diagnosis|bss-deconstruct|bss-goal|bss-good-question|bss-slowisfast|bss-action)
       echo "看商业问题" ;;
-    dbs-content|dbs-benchmark|dbs-hook|dbs-xhs-title|dbs-ai-check|dbs-wechat-html|dbs-spread|dbs-resonate|dbs-script-flow)
+    bss-content|bss-benchmark|bss-hook|bss-xhs-title|bss-ai-check|bss-wechat-html|bss-spread|bss-resonate|bss-script-flow)
       echo "做内容" ;;
-    dbs-content-system)
+    bss-content-system)
       echo "进阶-内容工程" ;;
-    dbs-chatroom|dbs-chatroom-austrian)
+    bss-chatroom|bss-chatroom-austrian)
       echo "进阶-聊天室" ;;
     bss-save|bss-restore|bss-report)
       echo "进阶-状态管理" ;;
-    dbs-decision)
+    bss-decision)
       echo "进阶-决策系统" ;;
-    dbs-agent-migration|dbs-bridge|dbs-skill-cleaner)
+    bss-agent-migration|bss-bridge|bss-skill-cleaner)
       echo "进阶-Agent基建" ;;
-    dbs-learning)
+    bss-learning)
       echo "进阶-学习" ;;
-    dbs-business|sales-followup|customer-success|pre-sales-solution)
+    bss-business|bss-sales-followup|bss-customer-success|bss-pre-sales-solution)
       echo "业务工具箱" ;;
     *)
       echo "未分组" ;;
