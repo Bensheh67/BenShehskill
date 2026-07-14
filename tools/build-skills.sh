@@ -29,7 +29,7 @@ group_for() {
       echo "进阶-内容工程" ;;
     dbs-chatroom|dbs-chatroom-austrian)
       echo "进阶-聊天室" ;;
-    dbs-save|dbs-restore|dbs-report)
+    bss-save|bss-restore|bss-report)
       echo "进阶-状态管理" ;;
     dbs-decision)
       echo "进阶-决策系统" ;;
@@ -37,6 +37,8 @@ group_for() {
       echo "进阶-Agent基建" ;;
     dbs-learning)
       echo "进阶-学习" ;;
+    dbs-business|sales-followup|customer-success|pre-sales-solution)
+      echo "业务工具箱" ;;
     *)
       echo "未分组" ;;
   esac
@@ -126,71 +128,77 @@ for skill_md in "$ROOT_DIR"/skills/*/SKILL.md; do
 done
 
 cat > "$INNER_DIR/README.md" <<EOF
-# dbskill ${VERSION}
+# bsskill ${VERSION}
 
 Trae Solo 一个 zip 装一个 skill。本压缩包按使用场景分了几个文件夹，按需把里面的 zip 逐个拖进 Trae Solo 的「上传技能」窗口即可。
 
 ## 必装入口
 
-- **dbs** — 主入口，根据你的问题自动路由到合适的诊断 skill。其他 skill 都依赖它，先装这个。
-- **dbs-update** — 更新 dbskill。安装后直接对 Agent 说「更新 dbskill」。
+- **bss** — 主入口，根据你的问题自动路由到合适的诊断 skill。其他 skill 都依赖它，先装这个。
+- **bss-update** — 更新 bsskill。安装后直接对 Agent 说「更新 bsskill」。
 
 ## 看商业问题
 
-- **dbs-diagnosis** — 商业模式诊断（问诊 + 体检两种模式）
-- **dbs-deconstruct** — 概念拆解（维特根斯坦 + 奥派经济学）
-- **dbs-goal** — 目标清晰化（把「我想做个人 IP」这种愿望语法审计成可检查的交付物）
-- **dbs-good-question** — 好问题生成器（把模糊问题改成 Agent 可推理、可验证的问题说明书）
-- **dbs-slowisfast** — 慢就是快（找看起来更慢但长期更快的方法）
-- **dbs-action** — 执行力诊断（阿德勒心理学，「知道该做但就是不做」）
+- **bss-diagnosis** — 商业模式诊断（问诊 + 体检两种模式）
+- **bss-deconstruct** — 概念拆解（维特根斯坦 + 奥派经济学）
+- **bss-goal** — 目标清晰化（把「我想做个人 IP」这种愿望语法审计成可检查的交付物）
+- **bss-good-question** — 好问题生成器（把模糊问题改成 Agent 可推理、可验证的问题说明书）
+- **bss-slowisfast** — 慢就是快（找看起来更慢但长期更快的方法）
+- **bss-action** — 执行力诊断（阿德勒心理学，「知道该做但就是不做」）
 
 ## 做内容
 
-- **dbs-content** — 内容创作诊断
-- **dbs-benchmark** — 对标分析
-- **dbs-hook** — 短视频开头优化
-- **dbs-xhs-title** — 小红书标题公式（75 个验证过的爆款公式）
-- **dbs-ai-check** — AI 写作特征识别
-- **dbs-wechat-html** — 微信公众号 HTML 生成（15 种经典风格，支持预览和全量生成）
-- **dbs-spread** — 传播心理解码
-- **dbs-resonate** — 文稿共鸣诊断
+- **bss-content** — 内容创作诊断
+- **bss-benchmark** — 对标分析
+- **bss-hook** — 短视频开头优化
+- **bss-xhs-title** — 小红书标题公式（75 个验证过的爆款公式）
+- **bss-ai-check** — AI 写作特征识别
+- **bss-wechat-html** — 微信公众号 HTML 生成（15 种经典风格，支持预览和全量生成）
+- **bss-spread** — 传播心理解码
+- **bss-resonate** — 文稿共鸣诊断
 
 ## 进阶-内容工程
 
-- **dbs-content-system** — 内容结构化系统（把本地大量内容资产搭成可继续生长的内容工程）
+- **bss-content-system** — 内容结构化系统（把本地大量内容资产搭成可继续生长的内容工程）
 
 ## 进阶-聊天室
 
-- **dbs-chatroom** — 定向聊天室（推荐专家或指定人物，多角色对话）
-- **dbs-chatroom-austrian** — 奥派经济聊天室（哈耶克 × 米塞斯 × Claude）
+- **bss-chatroom** — 定向聊天室（推荐专家或指定人物，多角色对话）
+- **bss-chatroom-austrian** — 奥派经济聊天室（哈耶克 × 米塞斯 × Claude）
 
 ## 进阶-状态管理
 
 诊断状态跨会话续接的三件套，攒几次诊断打包成一份报告。
 
-- **dbs-save** — 存档当前诊断
-- **dbs-restore** — 恢复上次诊断
-- **dbs-report** — 多次存档合并成可交付的 markdown 报告
+- **bss-save** — 存档当前诊断
+- **bss-restore** — 恢复上次诊断
+- **bss-report** — 多次存档合并成可交付的 markdown 报告
 
 ## 进阶-决策系统
 
-- **dbs-decision** — 决策系统（把重大决策沉淀成 ~/.dbs/decisions/ 下的本地知识工程）
+- **bss-decision** — 决策系统（把重大决策沉淀成 ~/.bss/decisions/ 下的本地知识工程）
 
 ## 进阶-Agent基建
 
-- **dbs-agent-migration** — Agent 工作台迁移（Claude Code / Codex / Grok / 通用 Agents 多端一致）
-- **dbs-skill-cleaner** — 本地 skill 清理器（扫描广告导流、任务劫持与可疑外部调用；确认后隔离）
+- **bss-agent-migration** — Agent 工作台迁移（Claude Code / Codex / Grok / 通用 Agents 多端一致）
+- **bss-skill-cleaner** — 本地 skill 清理器（扫描广告导流、任务劫持与可疑外部调用；确认后隔离）
 
 ## 进阶-学习
 
-- **dbs-learning** — 交互式学习（根据上一篇反馈生成下一篇）
+- **bss-learning** — 交互式学习（根据上一篇反馈生成下一篇）
+
+## 业务工具箱
+
+- **bss-sales-followup** — 销售跟进（客户开拓、需求挖掘、报价谈判、签约转化、客户留存）
+- **bss-customer-success** — 客户成功（onboarding、问题排查、满意度提升、续约增购）
+- **bss-pre-sales-solution** — 售前方案（需求分析、方案撰写、POC 测试、竞标）
 
 ---
 
 每个 zip 解压后根级是 SKILL.md（带 YAML frontmatter，含 name + description），格式遵循 Anthropic Skills 规范。
 EOF
 
-python3 - "$INNER_DIR" "$OUT_DIR/dbskill-${VERSION}.zip" <<'PY'
+python3 - "$INNER_DIR" "$OUT_DIR/bsskill-${VERSION}.zip" <<'PY'
 import os
 import sys
 import zipfile
@@ -205,4 +213,4 @@ with zipfile.ZipFile(archive_path, "w", compression=zipfile.ZIP_DEFLATED) as arc
 PY
 
 echo
-echo "done: $OUT_DIR/dbskill-${VERSION}.zip"
+echo "done: $OUT_DIR/bsskill-${VERSION}.zip"

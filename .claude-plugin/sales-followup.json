@@ -1,0 +1,12 @@
+{
+  "name": "bss-sales-followup",
+  "description": "一线销售跟进 Skill。覆盖客户开拓、需求挖掘、报价谈判、签约转化、客户留存全流程。通过原子知识库中的案例和方法论，帮助一线人员诊断业务卡点、生成下一步行动建议。",
+  "source": "./",
+  "strict": false,
+  "version": "2.17.10",
+  "category": "business-sales",
+  "keywords": ["sales", "followup", "negotiation", "conversion", "retention", "chinese"],
+  "skills": [
+    "./skills/bss-sales-followup"
+  ]
+}

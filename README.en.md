@@ -1,4 +1,4 @@
-# dbskill
+# bsskill
 
 [简体中文](README.md) | English | [日本語](README.ja.md) | [한국어](README.ko.md) | [繁體中文](README.zh-TW.md)
 
@@ -10,15 +10,15 @@
 
 **Supported in Doubao, WorkBuddy, Claude Code, Codex, and other Agents that support Skills.**
 
-Created by [dontbesilent](https://x.com/dontbesilent), dbskill distills 4,176 structured knowledge atoms and 27 directly callable Skills from 16,152 public posts.
+Created by [dontbesilent](https://x.com/dontbesilent), bsskill distills 4,176 structured knowledge atoms and 27 directly callable Skills from 16,152 public posts.
 
-[Quick start](#quick-start) · [Install](#install) · [Capabilities](#capabilities) · [Full guide](docs/新手入门.md) · [Releases](https://github.com/dontbesilent2025/dbskill/releases)
+[Quick start](#quick-start) · [Install](#install) · [Capabilities](#capabilities) · [Full guide](docs/新手入门.md) · [Releases](https://github.com/dontbesilent2025/bsskill/releases)
 
-![dbskill routing map](docs/skill-link-map.svg)
+![bsskill routing map](docs/skill-link-map.svg)
 
-## What dbskill helps you solve
+## What bsskill helps you solve
 
-You do not need to learn a complex methodology first, or know which tool to invoke. Give `/dbs` your current business situation, material, decision, or blocker. It selects the relevant Skill from the conversation context.
+You do not need to learn a complex methodology first, or know which tool to invoke. Give `/bss` your current business situation, material, decision, or blocker. It selects the relevant Skill from the conversation context.
 
 | Situation | What you get |
 | --- | --- |
@@ -33,34 +33,34 @@ You do not need to learn a complex methodology first, or know which tool to invo
 After installation, enter this in your Agent:
 
 ```text
-/dbs I run coding classes for children. I have 40 paid students, but renewals are low.
+/bss I run coding classes for children. I have 40 paid students, but renewals are low.
 Help me determine whether the issue is the product, pricing, or customer segment.
 ```
 
-`/dbs` reads the current conversation and selects an appropriate path. Add new facts or feedback after a round, then call `/dbs` again to determine what to work on next.
+`/bss` reads the current conversation and selects an appropriate path. Add new facts or feedback after a round, then call `/bss` again to determine what to work on next.
 
 When you already know the task, call a Skill directly:
 
 ```text
-/dbs-diagnosis I offer home-organization consulting for mothers. Clients say it is expensive. What should I change?
-/dbs-content I want to discuss “ordinary people should not rush into building a personal brand.” How can I turn this into content?
-/dbs-hook Here are the first 20 seconds of my video script. Improve the opening: …
-/dbs-benchmark I want to study enterprise-service content accounts. Which benchmarks should I research?
+/bss-diagnosis I offer home-organization consulting for mothers. Clients say it is expensive. What should I change?
+/bss-content I want to discuss “ordinary people should not rush into building a personal brand.” How can I turn this into content?
+/bss-hook Here are the first 20 seconds of my video script. Improve the opening: …
+/bss-benchmark I want to study enterprise-service content accounts. Which benchmarks should I research?
 ```
 
 ## Capabilities
 
 | Goal | Main Skills | Typical output |
 | --- | --- | --- |
-| Evaluate a business, product, price, or customer | `/dbs-diagnosis` | Diagnosis, risks, validation plan |
-| Find and study benchmarks | `/dbs-benchmark` | Benchmark shortlist and research framework |
-| Create topics, content, titles, and videos | `/dbs-content`, `/dbs-hook`, `/dbs-xhs-title` | Direction and publishable copy |
-| Review resonance, logic, and reach | `/dbs-resonate`, `/dbs-script-flow`, `/dbs-spread` | Prioritized edits |
-| Clarify concepts, goals, and questions | `/dbs-deconstruct`, `/dbs-goal`, `/dbs-good-question` | Testable definitions and goals |
-| Work through procrastination and execution blocks | `/dbs-action`, `/dbs-slowisfast` | Blocker analysis and next action |
-| Record and review long-term decisions | `/dbs-decision`, `/dbs-save`, `/dbs-restore`, `/dbs-report` | Local decision archive and reports |
-| Build content assets and multi-Agent workflows | `/dbs-content-system`, `/dbs-agent-migration`, `/dbs-bridge` | Local project, topic map, and bridge plan |
-| Audit local Skill risks | `/dbs-skill-cleaner` | Risk report and confirmed isolation |
+| Evaluate a business, product, price, or customer | `/bss-diagnosis` | Diagnosis, risks, validation plan |
+| Find and study benchmarks | `/bss-benchmark` | Benchmark shortlist and research framework |
+| Create topics, content, titles, and videos | `/bss-content`, `/bss-hook`, `/bss-xhs-title` | Direction and publishable copy |
+| Review resonance, logic, and reach | `/bss-resonate`, `/bss-script-flow`, `/bss-spread` | Prioritized edits |
+| Clarify concepts, goals, and questions | `/bss-deconstruct`, `/bss-goal`, `/bss-good-question` | Testable definitions and goals |
+| Work through procrastination and execution blocks | `/bss-action`, `/bss-slowisfast` | Blocker analysis and next action |
+| Record and review long-term decisions | `/bss-decision`, `/bss-save`, `/bss-restore`, `/bss-report` | Local decision archive and reports |
+| Build content assets and multi-Agent workflows | `/bss-content-system`, `/bss-agent-migration`, `/bss-bridge` | Local project, topic map, and bridge plan |
+| Audit local Skill risks | `/bss-skill-cleaner` | Risk report and confirmed isolation |
 
 See the [full guide and Skill directory](docs/新手入门.md#skill-全目录) for all 27 Skills, examples, and workflows.
 
@@ -71,16 +71,16 @@ See the [full guide and Skill directory](docs/新手入门.md#skill-全目录) f
 Run in a terminal:
 
 ```bash
-npx -y skills add dontbesilent2025/dbskill -g --all
+npx -y skills add dontbesilent2025/bsskill -g --all
 ```
 
-Return to your Agent and enter `/dbs 新手入门` to begin.
+Return to your Agent and enter `/bss 新手入门` to begin.
 
 ### Claude Code marketplace
 
 ```bash
-claude plugin marketplace add dontbesilent2025/dbskill
-claude plugin install dbs@dontbesilent-skills
+claude plugin marketplace add dontbesilent2025/bsskill
+claude plugin install bss@BenShehskill
 ```
 
 ![Claude Code installation demo](demo.gif)
@@ -90,17 +90,17 @@ claude plugin install dbs@dontbesilent-skills
 Ask your current Agent:
 
 ```text
-更新 dbskill
+更新 bsskill
 ```
 
-This syncs the official dbskill and does not modify records, reports, or decisions under `~/.dbs/`. See [GitHub Releases](https://github.com/dontbesilent2025/dbskill/releases) for changes.
+This syncs the official bsskill and does not modify records, reports, or decisions under `~/.bss/`. See [GitHub Releases](https://github.com/dontbesilent2025/bsskill/releases) for changes.
 
 ## How it works
 
 ```text
 A real task
    ↓
-/dbs reads context and selects the current entry point
+/bss reads context and selects the current entry point
    ↓
 One Skill produces a diagnosis, output, or record
    ↓
@@ -114,14 +114,14 @@ The repository includes 4,176 structured knowledge atoms, methodology documents 
 - Read the [atom library guide](知识库/原子库/README.md) for data scope and fields.
 - Use `知识库/原子库/atoms.jsonl` to build your own RAG.
 - Browse the [Skill knowledge packs](知识库/Skill知识包) for the methods.
-- Use `/dbs-save`, `/dbs-restore`, and `/dbs-report` for work across conversations. Data stays locally in `~/.dbs/`.
+- Use `/bss-save`, `/bss-restore`, and `/bss-report` for work across conversations. Data stays locally in `~/.bss/`.
 
-![dbskill knowledge pipeline](docs/knowledge-pipeline.svg)
+![bsskill knowledge pipeline](docs/knowledge-pipeline.svg)
 
 ## Project structure
 
 ```text
-dbskill/
+bsskill/
 ├── skills/                  # 27 published Skills
 ├── 知识库/                   # Knowledge atoms, methods, and glossary
 ├── docs/                    # Guide, diagrams, and demo assets
@@ -137,13 +137,6 @@ bash tools/build-skills.sh
 
 Packages are created in `dist/skills/`. Local experimental Skills whose names contain `beta` are excluded.
 
-## Author and support
-
-Author: [@dontbesilent](https://x.com/dontbesilent) · [Xiaohongshu](https://xhslink.com/m/637xuspR4iI) · [Douyin](https://v.douyin.com/pRUDhpBqOrc/)
-
-For paid Q&A support, scan the QR code or see the [group details](https://mp.weixin.qq.com/s/V7Dr0-75VYZOLJ6lbT_s0w).
-
-![Paid Q&A group QR code](docs/paid-qa-group-qrcode.png)
 
 ## License
 

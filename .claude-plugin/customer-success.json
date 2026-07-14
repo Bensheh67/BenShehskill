@@ -1,0 +1,12 @@
+{
+  "name": "bss-customer-success",
+  "description": "客户成功 Skill。覆盖客户 onboarding、问题排查、满意度提升、续约增购全流程。通过原子知识库中的案例和方法论，帮助一线人员诊断客户问题、生成下一步行动建议。",
+  "source": "./",
+  "strict": false,
+  "version": "2.17.10",
+  "category": "business-customer-success",
+  "keywords": ["customer-success", "onboarding", "retention", "upsell", "chinese"],
+  "skills": [
+    "./skills/customer-success"
+  ]
+}
